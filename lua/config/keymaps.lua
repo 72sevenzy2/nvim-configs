@@ -40,3 +40,5 @@ keymap.set("n", "w", "h")
 keymap.set("n", "r", "l")
 
 keymap.set("n", "l", "<CR>")
+
+keymap.set("n", "<leader>k", "K")
