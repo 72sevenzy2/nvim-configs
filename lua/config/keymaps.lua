@@ -46,3 +46,5 @@ keymap.set("n", "<leader>k", "K")
 keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)
+
+keymap.set("n", "<leader>l", "$")
