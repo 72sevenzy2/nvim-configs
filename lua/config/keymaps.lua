@@ -48,3 +48,5 @@ keymap.set("n", "<leader>f", function()
 end)
 
 keymap.set("n", "<leader>l", "$")
+
+keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
