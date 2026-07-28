@@ -1,5 +1,4 @@
 print("keymaps loaded!")
-
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -50,3 +49,5 @@ end)
 keymap.set("n", "<leader>l", "$")
 
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+
+keymap.set("n", "cb", "cib", { remap = true })
