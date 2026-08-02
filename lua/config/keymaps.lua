@@ -53,3 +53,5 @@ keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 keymap.set("n", "cb", "cib", { remap = true })
 
 keymap.set("n", "<leader>h", "0")
+
+keymap.set("n", "<leader>j", "K")
