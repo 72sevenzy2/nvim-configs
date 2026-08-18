@@ -55,3 +55,7 @@ keymap.set("n", "cb", "cib", { remap = true })
 keymap.set("n", "<leader>h", "0")
 
 keymap.set("n", "<leader>j", "K")
+
+vim.keymap.set("n", "<Space>", function()
+    vim.cmd("normal! " .. vim.v.count .. "gg")
+end)
