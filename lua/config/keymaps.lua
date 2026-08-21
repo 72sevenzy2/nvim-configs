@@ -62,5 +62,5 @@ end)
 
 vim.keymap.set("n", "<leader>j", ...)
 
-vim.keymap.set("n", "dd", "<C-d>", { desc = "Scroll down" })
+vim.keymap.set("n", "bb", "<C-d>", { desc = "Scroll down" })
 vim.keymap.set("n", "cc", "<C-u>", { desc = "Scroll up" })
