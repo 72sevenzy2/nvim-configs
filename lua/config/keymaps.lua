@@ -1,4 +1,3 @@
-print("keymaps loaded!")
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -56,11 +55,12 @@ keymap.set("n", "<leader>h", "0")
 
 keymap.set("n", "<leader>j", "K")
 
-vim.keymap.set("n", "<Space>", function()
+keymap.set("n", "<Space>", function()
     vim.cmd("normal! " .. vim.v.count .. "gg")
 end)
 
-vim.keymap.set("n", "<leader>j", ...)
+keymap.set("n", "<leader>j", ...)
 
-vim.keymap.set("n", "bb", "<C-d>", { desc = "Scroll down" })
-vim.keymap.set("n", "cc", "<C-u>", { desc = "Scroll up" })
+keymap.set("n", "nn", "<C-d>", { desc = "scroll down" })
+keymap.set("n", "cc", "<C-u>", { desc = "croll up" })
+keymap.set("n", "cn", ..., { desc = "ignore" })
