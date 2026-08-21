@@ -59,3 +59,8 @@ keymap.set("n", "<leader>j", "K")
 vim.keymap.set("n", "<Space>", function()
     vim.cmd("normal! " .. vim.v.count .. "gg")
 end)
+
+vim.keymap.set("n", "<leader>j", ...)
+
+vim.keymap.set("n", "dd", "<C-d>", { desc = "Scroll down" })
+vim.keymap.set("n", "cc", "<C-u>", { desc = "Scroll up" })
