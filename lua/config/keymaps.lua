@@ -39,8 +39,6 @@ keymap.set("n", "r", "l")
 
 keymap.set("n", "l", "<CR>")
 
-keymap.set("n", "<leader>k", "K")
-
 keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)
@@ -53,8 +51,6 @@ keymap.set("n", "cb", "cib", { remap = true })
 
 keymap.set("n", "<leader>h", "0")
 
-keymap.set("n", "<leader>j", "K")
-
 keymap.set("n", "<Space>", function()
     vim.cmd("normal! " .. vim.v.count .. "gg")
 end)
@@ -64,3 +60,5 @@ keymap.set("n", "<leader>j", ...)
 keymap.set("n", "nn", "<C-d>", { desc = "scroll down" })
 keymap.set("n", "cc", "<C-u>", { desc = "croll up" })
 keymap.set("n", "cn", ..., { desc = "ignore" })
+
+
