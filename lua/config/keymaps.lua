@@ -29,7 +29,7 @@ keymap.set("n", "r", "e")
 
 keymap.set("n", "<leader>n", ":Neotree toggle<CR>")
 
-keymap.set("n", "<leader>h", vim.lsp.buf.hover, { desc = "Hover" })
+keymap.set("n", "<leader>h", vim.lsp.buf.hover, { desc = "hover" })
 
 keymap.set("n", "<Tab>", ":bnext<CR>")
 keymap.set("n", "<S-Tab>", ":bprevious<CR>")
@@ -45,7 +45,7 @@ end)
 
 keymap.set("n", "<leader>l", "$")
 
-keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
 
 keymap.set("n", "cb", "cib", { remap = true })
 
@@ -61,4 +61,5 @@ keymap.set("n", "nn", "<C-d>", { desc = "scroll down" })
 keymap.set("n", "cc", "<C-u>", { desc = "croll up" })
 keymap.set("n", "cn", ..., { desc = "ignore" })
 
-
+keymap.set("n", "hh", "G", { desc="all the way down" })
+keymap.set("n", "ff", "gg", { desc="all the way up" })
