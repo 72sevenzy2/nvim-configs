@@ -1,3 +1,6 @@
+vim.cmd("syntax on")
+vim.opt.filetype = "on"
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
