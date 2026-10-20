@@ -2,20 +2,30 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-vim.keymap.set("x", "L", function()
+local api = require("Comment.api")
+local esc = vim.api.nvim_replace_termcodes(
+    "<Esc>", true, false, true
+)
+
+local function toggle_comment()
     local mode = vim.fn.visualmode()
-    local esc = vim.api.nvim_replace_termcodes(
-        "<Esc>", true, false, true
-    )
 
     vim.api.nvim_feedkeys(esc, "nx", false)
-    require("Comment.api").toggle.linewise(mode)
+    api.locked("toggle.linewise")(mode)
 
     vim.schedule(function()
         vim.cmd("nohlsearch")
         vim.cmd("redraw!")
     end)
-end)
+end
+
+vim.keymap.set("x", "L", toggle_comment, {
+    desc = "toggle comments",
+})
+
+vim.keymap.set("x", "F", toggle_comment, {
+    desc = "toggle uncomments",
+})
 
 keymap.set("v", "<leader>l", "$")
 keymap.set("v", "<leader>h", "0")
