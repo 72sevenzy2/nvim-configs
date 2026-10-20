@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+vim.keymap.set("x", "L", function()
+    require("Comment.api").locked("toggle.linewise")(vim.fn.visualmode())
+end, { desc = "for commenting selected lines on visual mode" })
+
 keymap.set("v", "<leader>l", "$")
 keymap.set("v", "<leader>h", "0")
 keymap.set("v", "hh", "G")
