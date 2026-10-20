@@ -3,8 +3,19 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 vim.keymap.set("x", "L", function()
-    require("Comment.api").locked("toggle.linewise")(vim.fn.visualmode())
-end, { desc = "for commenting selected lines on visual mode" })
+    local mode = vim.fn.visualmode()
+    local esc = vim.api.nvim_replace_termcodes(
+        "<Esc>", true, false, true
+    )
+
+    vim.api.nvim_feedkeys(esc, "nx", false)
+    require("Comment.api").toggle.linewise(mode)
+
+    vim.schedule(function()
+        vim.cmd("nohlsearch")
+        vim.cmd("redraw!")
+    end)
+end)
 
 keymap.set("v", "<leader>l", "$")
 keymap.set("v", "<leader>h", "0")
