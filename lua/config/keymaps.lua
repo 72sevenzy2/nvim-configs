@@ -93,3 +93,8 @@ keymap.set("n", "cn", ..., { desc = "ignore" })
 
 keymap.set("n", "hh", "G", { desc="all the way down" })
 keymap.set("n", "ff", "gg", { desc="all the way up" })
+
+vim.keymap.set("n", "<Space>", "<Nop>", {
+    silent = true,
+    remap = false,
+})
