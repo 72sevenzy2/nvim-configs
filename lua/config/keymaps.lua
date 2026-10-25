@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+keymap.set("n", "<leader>b", "<C-w>w")
+
 local api = require("Comment.api")
 local esc = vim.api.nvim_replace_termcodes(
     "<Esc>", true, false, true
