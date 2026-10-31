@@ -4,7 +4,7 @@ return {
         opts = {
             text = {
                 editing = function(opts)
-				return "pulverizing " .. opts.filename
+				return "pulverizing: ".. opts.filename
 			 end,
             },
         },
