@@ -90,7 +90,11 @@ end)
 keymap.set("n", "<leader>j", ...)
 
 keymap.set("n", "nn", "<C-d>", { desc = "scroll down" })
-keymap.set("n", "cc", "<C-u>", { desc = "croll up" })
+keymap.set("n", "cc", "<C-u>", { desc = "scroll up" })
+
+keymap.set("v", "nn", "<C-d>", { desc = "scroll down v" })
+keymap.set("v", "cc", "<C-u>", { desc = "scroll up v" })
+
 keymap.set("n", "cn", ..., { desc = "ignore" })
 
 keymap.set("n", "hh", "G", { desc="all the way down" })
